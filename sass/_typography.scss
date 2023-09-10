@@ -1,0 +1,119 @@
+body{
+    width: 100vw;
+    // height: 100vh;
+    overflow-x: hidden;
+    @include colflex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-light-grayish-blue;
+    font-family: $default-font-family;
+    line-height: 1.8rem;
+    // font-size: $default-font-size;
+}
+main{
+    margin: 3.5%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    grid-template-columns:repeat(4,20%);
+    // grid-template-rows: repeat(2,48%);
+    grid-template-areas: 
+    "dan dan jon kira"
+    "ham pat pat kira";
+}
+@media (max-width:800px) {
+    main{
+        // margin-top: 30rem;
+        grid-template-columns: repeat(2,30%);
+        // grid-template-rows: repeat(4,25%);
+        grid-template-areas:  
+        "dan dan "
+        "jon ham"
+        "kira kira"
+        "pat pat";
+    }
+}
+@media (max-width:600px) {
+    main{
+        // margin-top: 50rem;
+        grid-template-columns: 80%;
+        grid-template-rows: min-content;
+        grid-template-areas:  
+        "dan"
+        "jon"
+        "ham"
+        "kira"
+        "pat";
+    }
+}
+section{
+    padding: 2.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow:0 .1rem .5rem rgba($color-dark,.2);
+    h4{
+        padding-bottom: 1.5rem;
+        // font-size: $default-font-size;
+        font-size: 15px;
+    }
+    p{
+        color: $color-gray;
+    }
+}
+.dark{
+    &,
+    &-p{
+    color: $color-dark;}
+}
+.section-daniel{
+    grid-area: dan;
+    background-color: $color-purple;
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 6rem;
+    color: $color-white;
+}
+.section-jonathan{
+    grid-area: jon;
+    background-color: $color-grayish-blue;
+    color: $color-white;
+}
+.section-kira{
+    grid-area: kira;
+    background-color: $color-white;
+    color: $color-grayish-blue;
+}
+.section-jeanatte{
+    grid-area: ham;
+    background-color: $color-white;
+    color: $color-grayish-blue;
+}
+.section-patrick{
+    grid-area: pat;
+    background-color: $color-dark;
+    color: $color-white;
+}
+.header{
+    @include rowflex;
+    font-size: .8rem;
+}
+img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.header{
+    padding-bottom: 1rem;
+    h3{
+        color: $color-light-grayish-blue;
+    }
+    p{
+        color: $color-gray;
+    }
+    &-dark{
+        h3{
+            color: $color-dark;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 1.8rem;
+}
+
+main {
+  margin: 3.5%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 20%);
+  grid-template-areas: "dan dan jon kira" "ham pat pat kira";
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: repeat(2, 30%);
+    grid-template-areas: "dan dan " "jon ham" "kira kira" "pat pat";
+  }
+}
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 80%;
+    grid-template-rows: min-content;
+    grid-template-areas: "dan" "jon" "ham" "kira" "pat";
+  }
+}
+section {
+  padding: 2.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 0.1rem 0.5rem rgba(25, 33, 46, 0.2);
+}
+section h4 {
+  padding-bottom: 1.5rem;
+  font-size: 15px;
+}
+section p {
+  color: hsl(0, 0%, 81%);
+}
+
+.dark, .dark-p {
+  color: hsl(219, 29%, 14%);
+}
+
+.section-daniel {
+  grid-area: dan;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 6rem;
+  color: white;
+}
+
+.section-jonathan {
+  grid-area: jon;
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+
+.section-kira {
+  grid-area: kira;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+
+.section-jeanatte {
+  grid-area: ham;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+
+.section-patrick {
+  grid-area: pat;
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.header {
+  padding-bottom: 1rem;
+}
+.header h3 {
+  color: hsl(210, 46%, 95%);
+}
+.header p {
+  color: hsl(0, 0%, 81%);
+}
+.header-dark h3 {
+  color: hsl(219, 29%, 14%);
+}
+
+/*# sourceMappingURL=style.css.map */

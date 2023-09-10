@@ -1,0 +1,45 @@
+// VARIABLES
+$color-white:white;
+
+$color-dark:hsl(219, 29%, 14%);
+
+$color-purple:hsl(263, 55%, 52%);
+
+$color-grayish-blue:hsl(217, 19%, 35%) ;
+$color-light-grayish-blue: hsl(210, 46%, 95%);
+
+$color-gray:hsl(0, 0%, 81%);
+
+// FONT FAMILY 
+$default-font-family:'Barlow Semi Condensed', sans-serif;
+
+// FONT SIZE 
+$default-font-size:13px;
+
+// MIXINS 
+@mixin rowflex($gap:1rem){
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin colflex($gap:1rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+@media (max-width:1200px) {
+    html{
+    font-size:50%;
+   }
+}
