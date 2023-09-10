@@ -27,7 +27,8 @@ body {
 }
 
 main {
-  margin: 3.5%;
+  height: auto;
+  margin: 10%;
   display: grid;
   justify-content: center;
   align-content: center;
